@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.chatanywhere.com.cn/v1/completions")
-                .header("Authorization","sk-Nn4MSf4TFdBSXpOQ84Tfst4JRjt4jltzXUjKj9ZB2cnHVZze")
+                .header("Authorization","Bearer sk-Nn4MSf4TFdBSXpOQ84Tfst4JRjt4jltzXUjKj9ZB2cnHVZze")
                 .post(body)
                 .build();
 
