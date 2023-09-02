@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("model","text-davinci-003");
+            jsonBody.put("model","gpt-3.5-turbo-0613");
             jsonBody.put("prompt",question);
             jsonBody.put("max_tokens",4000);
             jsonBody.put("temperature",0);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
-                .url("https://api.openai.com/v1/completions")
+                .url("https://api.chatanywhere.com.cn/v1/completions")
                 .header("Authorization","Bearer YOUR_API_KEY")
                 .post(body)
                 .build();
